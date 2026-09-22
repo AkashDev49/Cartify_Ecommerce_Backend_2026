@@ -16,7 +16,12 @@ cloudinary.v2.config({
 const app = express(); //1
 
 const port = process.env.PORT || 5000; //2
-app.use(cors()); //3
+app.use(
+	cors({
+		origin: "https://cartify-ecommerce-frontend-2026.vercel.app", // apna Vercel URL
+		credentials: true,
+	}),
+); //3
 
 // Routes
 import UserRouter from "./routes/UserRouter.js";
