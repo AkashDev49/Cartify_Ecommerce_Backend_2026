@@ -15,7 +15,7 @@ cloudinary.v2.config({
 
 const app = express(); //1
 
-const port = process.env.PORT; //2
+const port = process.env.PORT || 5000; //2
 app.use(cors()); //3
 
 // Routes
